@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+
+<!-- ChatBot -->
+<link rel="stylesheet" type="text/css" href="css/jquery.convform.css">
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.convform.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+
+</head>
+<body>
+<!-- ChatBot -->
+<div class="chat_icon">
+	<i class="fa fa-comments" aria-hidden="true"></i>
+</div>
+
+<div class="chat_box">
+	<div class="my-conv-form-wrapper">
+		<form action="" method="GET" class="hidden">
+
+      <select data-conv-question="Hello! I'm a bot. May I ask You few questions? " name="first-question">
+	                                    <option value="yes">Yes</option>
+	                                    <option value="sure">Sure!</option>
+	                                </select>
+	                                <input type="text" name="name" data-conv-question="Alright! First, tell me your full name, please.|Okay! Please, tell me your name first.">
+	                                <input type="text" data-conv-question="Howdy, {name}:0! It's a pleasure to meet you. " data-no-answer="true">
+
+      <select name="multi[]"  data-conv-question="Are you experiencing any of the following symptoms?" multiple>
+	                                    <option value="Cough">Cough</option>
+	                                    <option value="Fever">Fever</option>
+	                                    <option value="Difficulty in breathing">Difficulty in breathing</option>
+	                                    <option value="Loss of senses of smell and taste">Loss of senses of smell and taste</option>
+                                      <option value="None of the above">None of the above</option>
+	                                </select>
+            
+      <select  data-conv-question="Have you recently came in contact with a person who have tested positive for Covid-19?" name="programmer">
+	                                    <option value="yes">Yes</option>
+	                                    <option value="no">No</option>
+	                                </select>
+	                                <div data-conv-fork="programmer">
+	                                    <div data-conv-case="yes">
+	                                        <input type="text" data-conv-question="Don't panic. Simply follow the Covid-19 norms strictly. Isolate yourself. Better to get yourself checked. Take immunity boosters. " data-no-answer="true">
+	                                    </div>
+	                                    <div data-conv-case="no">
+		                                    <input name="thought" data-conv-question="If you are an eligible candidate, immediately get yourself vaccinated. If not , then Simply follow the Covid-19 norms strictly. Take immunity boosters. ">
+		                                    
+		                                    </input>
+	                                    </div>
+	                                </div>
+		<select  data-conv-question="Wanna look activities that can help to increase your immunity?" name="programmer">
+	                                    <option value="yes">Yes</option>
+	                                    <option value="no">No</option>
+	                                </select>
+	                                <div data-conv-fork="programmer">
+	                                    <div data-conv-case="yes">
+	                                        <input type="text" data-conv-question="Drink warm water throughout the day.Practice Meditation, Yogasana, and Pranayama.Increase the intake of Turmeric, Cumin, Coriander and garlic.Drink herbal tea or decoction of Holy basil, Cinnamon, Black pepper, Dry Ginger and Raisin.Avoid sugar and replace it with jaggery if needed.Apply Ghee (clarified butter), Sesame oil, or Coconut oil in both the nostrils to keep the nostrils clean.Inhale steam with Mint leaves and Caraway seeds." data-no-answer="true">
+	                                    </input>
+										</div>
+	                                    <div data-conv-case="no">
+		                                    <input name="though" data-conv-question=" Okay!!!">
+		                                    
+		                                    </input>
+	                                    </div>
+	                                </div>
+	              
+	                                   
+
+                     
+
+  	</form>
+	</div>
+</div>
+<!-- ChatBot end -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+function talk(){
+    var know ={
+        "Hi":"Hello",
+        "How Are You?":"Great !",
+        "Bye":"Have A Nice Day !",
+        "Hello":"Hi , Whats Up"
+    };
+    var user = document.getElementById('userBox').value;
+    document.getElementById('chatLog').innerHTML = user + "<br>";
+    if(user in know){
+        document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+    }else{
+        document.getElementById('chatLog').innerHTML = "I do not understand .";
+    }
+}
+	portfolioList = document.querySelectorAll('.portfolio-box');
+	portfolioList.forEach(function(portfolioPic) {
+		portfolioPic.addEventListener('click',function(){
+			bg = this.style.backgroundImage;
+			document.getElementById('port_pop_pic_bg').classList.add("active")
+			document.getElementById('port_pop_pic').style.backgroundImage = bg
+			document.getElementById('port_pop_pic').classList.add("active")
+		});	
+	})
+	document.getElementById('port_pop_pic_bg').addEventListener('click',function(){
+			document.getElementById('port_pop_pic_bg').classList.remove("active")
+			document.getElementById('port_pop_pic').classList.remove("active")
+	})
+</script>
+
+</body>
+</html>
