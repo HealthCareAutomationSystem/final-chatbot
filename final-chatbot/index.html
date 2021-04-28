@@ -50,7 +50,7 @@
 	                                        <input type="text" data-conv-question="Don't panic. Simply follow the Covid-19 norms strictly. Isolate yourself. Better to get yourself checked. Take immunity boosters. " data-no-answer="true">
 	                                    </div>
 	                                    <div data-conv-case="no">
-		                                    <input name="thought" data-conv-question="If you are an eligible candidate, immediately get yourself vaccinated. If not , then Simply follow the Covid-19 norms strictly. Take immunity boosters. ">
+		                                    <input name="thought" data-conv-question="If you are an eligible candidate, immediately get yourself vaccinated. If not , then Simply follow the Covid-19 norms strictly. Take immunity boosters." data-no-answer="true">
 		                                    
 		                                    </input>
 	                                    </div>
@@ -61,8 +61,30 @@
 	                                </select>
 	                                <div data-conv-fork="programmer">
 	                                    <div data-conv-case="yes">
-	                                        <input type="text" data-conv-question="Drink warm water throughout the day.Practice Meditation, Yogasana, and Pranayama.Increase the intake of Turmeric, Cumin, Coriander and garlic.Drink herbal tea or decoction of Holy basil, Cinnamon, Black pepper, Dry Ginger and Raisin.Avoid sugar and replace it with jaggery if needed.Apply Ghee (clarified butter), Sesame oil, or Coconut oil in both the nostrils to keep the nostrils clean.Inhale steam with Mint leaves and Caraway seeds." data-no-answer="true">
+	                                    <input type="text" data-conv-question="Drink warm water throughout the day." data-no-answer="true">
 	                                    </input>
+										<input type="text" data-conv-question="Practice Meditation, Yogasana, and Pranayama. " data-no-answer="true">
+										<input type="text" data-conv-question="Increase the intake of Turmeric, Cumin, Coriander and garlic. " data-no-answer="true">
+										<input type="text" data-conv-question="Drink herbal tea or decoction of Holy basil, Cinnamon, Black pepper, Dry Ginger and Raisin. " data-no-answer="true">
+										<input type="text" data-conv-question="Avoid sugar and replace it with jaggery if needed.Apply Ghee (clarified butter), Sesame oil, or Coconut oil in both the nostrils to keep the nostrils clean. " data-no-answer="true">
+										<input type="text" data-conv-question="Inhale steam with Mint leaves and Caraway seeds." data-no-answer="true">
+										</input>
+        <select  data-conv-question="Was this information helpful." name="programmer">
+	                                    <option value="yes">Yes</option>
+	                                    <option value="no">No</option>
+	                                </select>
+	                                <div data-conv-fork="programmer">
+	                                    <div data-conv-case="yes">
+	                                        <input type="text" data-conv-question="Great to hear that!! " data-no-answer="true">
+	                                    </div>
+	                                    <div data-conv-case="no">
+		                                    <input name="thought" data-conv-question="We are sorry for that!!!." data-no-answer="true">
+		                                    
+		                                    </input>
+	                                    </div>
+	                                </div>
+
+										
 										</div>
 	                                    <div data-conv-case="no">
 		                                    <input name="though" data-conv-question=" Okay!!!">
@@ -70,7 +92,9 @@
 		                                    </input>
 	                                    </div>
 	                                </div>
-	              
+
+	              <input type="text" name="conclusion" data-conv-question="Thank You,{name}:0! Have a nice Day." >
+										</input>
 	                                   
 
                      
